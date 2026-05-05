@@ -98,22 +98,22 @@ class PriorityQueueLinkSort<E, N extends Comparable<N>>
     }
 
     @Override
-    public String toString() {
-        if (isEmpty())
-            return "Queue vacía";
+public String toString() {
+    if (isEmpty())
+        return "Queue vacía";
 
-        StringBuilder sb = new StringBuilder();
-        Node<EntryNode> temp = first;
+    String resultado = "";
+    Node<EntryNode> temp = first;
 
-        while (temp != null) {
-            sb.append("[")
-              .append(temp.getData().data)
-              .append(", p=")
-              .append(temp.getData().priority)
-              .append("] ");
-            temp = temp.getNext();
-        }
-
-        return sb.toString();
+    while (temp != null) {
+        resultado += "[" 
+                  + temp.getData().data 
+                  + ", p=" 
+                  + temp.getData().priority 
+                  + "] ";
+        temp = temp.getNext();
     }
+
+    return resultado;
+}
 }
