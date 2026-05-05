@@ -95,20 +95,20 @@ class DequeLink<E> implements Deque<E> {
         return first == null;
     }
 
-    @Override
-    public String toString() {
-        if (isEmpty()) {
-            return "Deque vacío";
-        }
+   @Override
+public String toString() {
+    if (isEmpty()) {
+        return "Deque vacío";
+    }
 
-        StringBuilder sb = new StringBuilder();
-        Node<E> temp = first;
+    String resultado = "";
+    Node<E> temp = first;
 
-        while (temp != null) {
-            sb.append(temp.data).append(" ");
-            temp = temp.next;
-        }
+    while (temp != null) {
+        resultado = resultado + temp.data + " ";
+        temp = temp.next;
+    }
 
-        return sb.toString();
+    return resultado;
     }
 }
