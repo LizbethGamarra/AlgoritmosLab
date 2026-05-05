@@ -61,20 +61,19 @@ public class QueueArray<E> implements Queue<E> {
         return size == array.length;
     }
 
-    @Override
-    public String toString() {
+   public String toString() {
         if (isEmpty()) {
             return "Cola vacía";
         }
 
-        StringBuilder sb = new StringBuilder();
+        String resultado = "";
         int i = front;
 
         for (int count = 0; count < size; count++) {
-            sb.append(array[i]).append(" ");
+            resultado = resultado + array[i] + " ";
             i = (i + 1) % array.length;
         }
 
-        return sb.toString();
+        return resultado;
     }
 }
