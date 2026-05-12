@@ -160,8 +160,7 @@ public class LinkedBST<E extends Comparable<E>>
 
             node.data = min.data;
 
-            node.right =
-                    deleteRec(node.right, min.data);
+            node.right =deleteRec(node.right, min.data);
         }
 
         return node;
@@ -185,8 +184,7 @@ public class LinkedBST<E extends Comparable<E>>
 
         if (node == null) {
 
-            throw new ItemNoFound(
-                    "Árbol vacío");
+            throw new ItemNoFound("Árbol vacío");
         }
 
         while (node.left != null) {
@@ -286,8 +284,7 @@ public class LinkedBST<E extends Comparable<E>>
 
         if (isEmpty()) {
 
-            throw new ExceptionIsEmpty(
-                    "El árbol está vacío");
+            throw new ExceptionIsEmpty("El árbol está vacío");
         }
 
         root = null;
@@ -356,14 +353,11 @@ public class LinkedBST<E extends Comparable<E>>
             return -1;
         }
 
-        int leftHeight =
-                calculateHeight(node.left);
+        int leftHeight =calculateHeight(node.left);
 
-        int rightHeight =
-                calculateHeight(node.right);
+        int rightHeight = calculateHeight(node.right);
 
-        return 1 + Math.max(leftHeight,
-                            rightHeight);
+        return 1 + Math.max(leftHeight, rightHeight);
     }
     public int amplitude(int level) {
 
